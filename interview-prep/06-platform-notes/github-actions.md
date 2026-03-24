@@ -1,28 +1,28 @@
 # GitHub Actions
 
-## Resumen corto
+## Short Summary
 
-Un pipeline basico para este tipo de rol deberia validar rapido, fallar pronto y separar build/test/deploy con pasos claros.
+A basic pipeline for this kind of role should validate quickly, fail early, and separate build, test, and deploy into clear steps.
 
-## Pipeline base que deberias poder explicar
+## Base Pipeline You Should Be Able to Explain
 
-- checkout del repo
-- setup de Go
-- cache de modulos
+- checkout the repository
+- set up Go
+- cache modules
 - `go test ./...`
 - build
-- analisis adicional opcional
-- deploy condicionado por branch o entorno
+- optional extra analysis
+- deploy conditioned on branch or environment
 
-## Preguntas tipicas
+## Typical Questions
 
-### Que cuidarias en CI
+### What would you pay attention to in CI
 
-- feedback rapido
-- jobs pequenos y legibles
-- secretos bien manejados
-- promover artefactos inmutables
+- fast feedback
+- small, readable jobs
+- well-managed secrets
+- promoting immutable artifacts
 
-### Como meterias AI tools sin perder calidad
+### How would you use AI tools without losing quality
 
-Usaria Copilot o herramientas similares para acelerar implementacion, pero mantendria tests, code review y politicas de pipeline como red de seguridad.
+I would use Copilot or similar tools to speed up implementation, but I would keep tests, code review, and pipeline policies as the safety net.

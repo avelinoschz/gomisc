@@ -1,25 +1,25 @@
 # Terraform, OPA, Rego, CEL
 
-## Resumen corto
+## Short Summary
 
-- Terraform sirve para declarar infraestructura de forma repetible.
-- Lo importante para entrevista no es recitar sintaxis, sino entender modulos, variables, estado y drift.
-- OPA/Rego y CEL ayudan a expresar reglas o politicas para validar configuraciones y despliegues.
+- Terraform is used to declare infrastructure in a repeatable way.
+- For interviews, the important part is not memorizing syntax, but understanding modules, variables, state, and drift.
+- OPA/Rego and CEL help express rules or policies to validate configurations and deployments.
 
-## Preguntas tipicas
+## Typical Questions
 
-### Que es drift
+### What is drift
 
-Es la diferencia entre lo declarado y lo que realmente existe en infraestructura.
+It is the difference between what is declared and what actually exists in infrastructure.
 
-### Para que sirven los modulos
+### What are modules for
 
-Para reutilizar patrones y reducir copia/pega en IaC.
+To reuse patterns and reduce copy/paste in infrastructure as code.
 
-### Donde entraria policy-as-code
+### Where would policy-as-code fit
 
-Antes o durante el despliegue, para bloquear configuraciones que no cumplen estandares de seguridad, naming, red o compliance.
+Before or during deployment, to block configurations that do not meet security, naming, networking, or compliance standards.
 
-### Como responder si te preguntan por OPA/Rego o CEL y no eres experto
+### How to answer if you are asked about OPA/Rego or CEL and you are not an expert
 
-"No diria que soy especialista, pero entiendo el objetivo: expresar reglas declarativas para validar configuraciones. Me siento comodo aprendiendo la sintaxis concreta mientras mantengo claro el flujo donde esas politicas se evalúan."
+"I would not call myself a specialist, but I understand the goal: expressing declarative rules to validate configurations. I am comfortable learning the concrete syntax while keeping the evaluation flow clear."

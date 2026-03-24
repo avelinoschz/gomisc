@@ -1,11 +1,11 @@
 # 04 Cache and Concurrency
 
-Este bloque apunta a dos cosas:
+This block is about two things:
 
-- que resuelvas problemas clasicos de backend con estado en memoria
-- que no te asuste usar concurrencia basica cuando realmente ayuda
+- solving classic backend problems with in-memory state
+- getting comfortable with basic concurrency when it actually helps
 
-Prioridades:
+Priorities:
 
 - `map`
 - `sync.RWMutex`
@@ -14,7 +14,7 @@ Prioridades:
 - `channel`
 - `select`
 
-Regla:
+Rule:
 
-- piensa en soluciones razonables para una entrevista de 60 minutos
-- evita patrones rebuscados si una solucion mas simple cumple
+- aim for solutions that are reasonable in a 60-minute interview
+- avoid fancy patterns if a simpler solution works

@@ -1,27 +1,27 @@
 # Cache Ex01: In-Memory Cache
 
-Objetivo:
+Goal:
 
-- construir una cache segura para concurrencia
-- practicar `sync.RWMutex`
+- build a concurrency-safe cache
+- practice `sync.RWMutex`
 
-Enunciado:
+Prompt:
 
-Completa `MemoryCache`.
+Complete `MemoryCache`.
 
-Necesita:
+It needs:
 
 - `Get(key string) (string, bool)`
 - `Set(key, value string)`
 
-Reglas:
+Rules:
 
-- usa `map[string]string`
-- protege acceso con `sync.RWMutex`
-- no metas TTL todavia
+- use `map[string]string`
+- protect access with `sync.RWMutex`
+- do not add TTL yet
 
-Criterio de terminado:
+Done criteria:
 
-- lectura concurrente segura
-- escritura segura
-- codigo corto y claro
+- safe concurrent reads
+- safe writes
+- short and clear code

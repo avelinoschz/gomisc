@@ -1,19 +1,19 @@
 # HTTP Ex03: Consistent Error Handling
 
-Objetivo:
+Goal:
 
-- evitar repetir demasiado codigo en handlers
-- crear helpers pequenos para respuestas JSON
+- avoid repeating too much code across handlers
+- create small helpers for JSON responses
 
-Enunciado:
+Prompt:
 
-Completa:
+Complete:
 
 - `writeJSON`
 - `writeError`
-- el handler `GET /health`
+- the `GET /health` handler
 
-Respuesta de `GET /health`:
+Response for `GET /health`:
 
 ```json
 {
@@ -22,7 +22,7 @@ Respuesta de `GET /health`:
 }
 ```
 
-Cuando ocurra un error de serializacion:
+When a serialization error happens:
 
-- responder `500`
-- devolver un JSON de error consistente
+- respond with `500`
+- return a consistent error JSON body

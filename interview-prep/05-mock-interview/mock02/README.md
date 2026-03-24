@@ -1,32 +1,32 @@
 # Mock 02: Add a New Requirement
 
-Duracion objetivo:
+Target duration:
 
-- 45 a 60 minutos
+- 45 to 60 minutes
 
-Problema:
+Problem:
 
-Toma el mock anterior y agrega una regla nueva:
+Take the previous mock and add a new requirement:
 
-- soportar `GET /catalog?sku=...&include=meta`
+- support `GET /catalog?sku=...&include=meta`
 
-Cuando `include=meta`, la respuesta debe incluir:
+When `include=meta`, the response must include:
 
-- `source`: `cache` o `store`
-- `served_at`: timestamp en formato RFC3339
+- `source`: `cache` or `store`
+- `served_at`: a timestamp in RFC3339 format
 
-Restricciones:
+Constraints:
 
-- no rompas el formato base del producto
-- intenta extender la solucion sin reescribir todo
+- do not break the base product format
+- try to extend the solution without rewriting everything
 
-Checklist de evaluacion:
+Evaluation checklist:
 
-- cambio pequeno pero limpio
-- no duplicar demasiada logica
-- tests adaptados a la nueva respuesta
+- small but clean change
+- no excessive logic duplication
+- tests adapted to the new response
 
-Discusion de diseno:
+Design discussion:
 
-- como harrias versionado de API si esto creciera
-- como evitar acoplar demasiado el handler al formato de respuesta
+- how you would version the API if this kept growing
+- how to avoid coupling the handler too tightly to the response format

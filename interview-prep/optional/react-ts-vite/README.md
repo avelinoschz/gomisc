@@ -1,23 +1,23 @@
 # Optional: React + TypeScript + Vite
 
-Este bloque es opcional y solo entra si terminamos el nucleo.
+This block is optional and only comes in if we finish the core track.
 
-Objetivo:
+Goal:
 
-- no llegar frio si aparece algo de full stack
-- repasar lo minimo util de React moderno
+- avoid going in cold if any full-stack work shows up
+- review the minimum useful set of modern React concepts
 
-Crash course sugerido:
+Suggested crash course:
 
-1. crear proyecto con Vite
-2. repasar `useState`
-3. fetch de un endpoint sencillo
-4. tipar props y estado simples
-5. renderizar loading, data y error
+1. create a project with Vite
+2. review `useState`
+3. fetch a simple endpoint
+4. type simple props and state
+5. render loading, data, and error states
 
-Si lo hacemos, el ejercicio ideal seria:
+If we do it, the ideal exercise would be:
 
-- un catalogo pequeno
-- input para SKU
-- fetch a un endpoint Go local
-- render de JSON con estados basicos
+- a small catalog
+- an input for SKU
+- a fetch to a local Go endpoint
+- JSON rendering with basic UI states

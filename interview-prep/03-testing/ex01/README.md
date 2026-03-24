@@ -1,23 +1,23 @@
 # Testing Ex01: Table-Driven Tests
 
-Objetivo:
+Goal:
 
-- practicar tests de funciones puras
-- acostumbrarte a la forma table-driven
+- practice tests for pure functions
+- get comfortable with the table-driven style
 
-Enunciado:
+Prompt:
 
-Implementa `NormalizeTags` y despues escribe tests.
+Implement `NormalizeTags` and then write tests.
 
-Comportamiento esperado:
+Expected behavior:
 
-- espacios alrededor se eliminan
-- todo se convierte a lowercase
-- strings vacios se ignoran
-- no debe haber duplicados en el resultado
+- surrounding spaces are trimmed
+- everything is converted to lowercase
+- empty strings are ignored
+- the result must not contain duplicates
 
-Casos minimos:
+Minimum cases:
 
-- entrada vacia
-- tags con mayusculas y espacios
-- tags repetidos
+- empty input
+- tags with uppercase letters and spaces
+- duplicate tags

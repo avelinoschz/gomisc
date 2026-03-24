@@ -1,27 +1,27 @@
 # Cloud Run vs GKE
 
-## Resumen corto
+## Short Summary
 
-- Cloud Run sirve muy bien para servicios HTTP stateless con despliegue rapido y poca friccion operativa.
-- GKE tiene mas poder y mas complejidad; lo eliges cuando necesitas control fino de networking, sidecars, scheduling o cargas mas especializadas.
-- En una plataforma interna, Cloud Run suele acelerar onboarding; GKE suele aparecer cuando ya hay necesidades mas avanzadas o estandarizacion de Kubernetes.
+- Cloud Run works very well for stateless HTTP services that need fast delivery with low operational friction.
+- GKE offers more power and more complexity; choose it when you need fine-grained control over networking, sidecars, scheduling, or more specialized workloads.
+- In an internal platform, Cloud Run often speeds up onboarding, while GKE tends to show up when teams need more advanced capabilities or Kubernetes standardization.
 
-## Preguntas tipicas
+## Typical Questions
 
-### Cuando elegirias Cloud Run sobre GKE
+### When would you choose Cloud Run over GKE
 
-Cuando el servicio es stateless, tiene trafico HTTP claro, no necesita control profundo del cluster y queremos minimizar operacion.
+When the service is stateless, has clear HTTP traffic, does not need deep cluster control, and we want to minimize operations.
 
-### Cuando elegirias GKE
+### When would you choose GKE
 
-Cuando necesitamos Kubernetes nativo, sidecars, DaemonSets, politicas complejas, workloads de larga vida o configuraciones avanzadas de red.
+When we need native Kubernetes features, sidecars, DaemonSets, complex policies, long-lived workloads, or advanced network configuration.
 
-### Riesgos o tradeoffs de Cloud Run
+### Risks or tradeoffs of Cloud Run
 
-- menos control fino del runtime
-- cold starts segun el patron de trafico
-- limites y modelo mas opinionado
+- less fine-grained runtime control
+- cold starts depending on traffic patterns
+- limits and a more opinionated model
 
-### Que dirias en entrevista
+### What you might say in an interview
 
-"Para una plataforma de migracion, Cloud Run ayuda a mover equipos rapido porque reduce la carga operativa. Si la aplicacion necesita capacidades mas avanzadas de Kubernetes o mas control de infraestructura, entonces GKE se vuelve mejor opcion."
+"For a migration platform, Cloud Run helps teams move faster because it reduces operational load. If an application needs more advanced Kubernetes capabilities or more infrastructure control, then GKE becomes the better option."

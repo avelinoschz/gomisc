@@ -1,16 +1,16 @@
 # HTTP Ex02: POST + Decode + Validate
 
-Objetivo:
+Goal:
 
-- practicar decode de JSON
-- validar input
-- responder con `201`, `400` y `409`
+- practice JSON decoding
+- validate input
+- respond with `201`, `400`, and `409`
 
-Enunciado:
+Prompt:
 
-Completa `POST /catalog`.
+Complete `POST /catalog`.
 
-Body esperado:
+Expected body:
 
 ```json
 {
@@ -20,8 +20,8 @@ Body esperado:
 }
 ```
 
-Reglas:
+Rules:
 
-- `sku` y `name` son obligatorios
-- `price` debe ser mayor que 0
-- si el `sku` ya existe, responder `409`
+- `sku` and `name` are required
+- `price` must be greater than 0
+- if the `sku` already exists, respond with `409`

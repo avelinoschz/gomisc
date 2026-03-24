@@ -1,20 +1,20 @@
 # Cloud Functions and Workflows
 
-## Resumen corto
+## Short Summary
 
-- Cloud Functions encaja bien en eventos pequenos y bien delimitados.
-- Workflows coordina pasos entre servicios, especialmente cuando hay orquestacion, retries o llamados a multiples APIs.
+- Cloud Functions fits small, well-bounded event-driven work.
+- Workflows coordinates steps across services, especially when there is orchestration, retries, or calls to multiple APIs.
 
-## Preguntas tipicas
+## Typical Questions
 
-### Cuando no usarias Cloud Functions
+### When would you avoid Cloud Functions
 
-Cuando la logica ya no es pequena, cuando el flujo necesita demasiado estado o cuando el servicio encaja mejor como API larga y estable.
+When the logic is no longer small, when the flow needs too much state, or when the service fits better as a longer-lived and stable API.
 
-### Cuando usarias Workflows
+### When would you use Workflows
 
-Para orquestar pasos entre servicios GCP o APIs externas sin meter esa coordinacion dentro de una sola aplicacion.
+To orchestrate steps across GCP services or external APIs without embedding all that coordination into a single application.
 
-### Como lo conectarias con una plataforma interna
+### How would you connect this to an internal platform
 
-Podrias usar Workflows para automatizar onboarding, aprobaciones o secuencias operativas; por ejemplo, validar entrada, crear recursos y notificar resultados.
+You could use Workflows to automate onboarding, approvals, or operational sequences; for example, validating input, creating resources, and notifying outcomes.

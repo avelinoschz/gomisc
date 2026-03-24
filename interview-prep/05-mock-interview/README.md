@@ -1,16 +1,16 @@
 # 05 Mock Interview
 
-Este bloque combina varias piezas con limite de tiempo.
+This block combines several pieces under a time limit.
 
-Formato recomendado:
+Recommended format:
 
-- lee el enunciado una vez
-- anota 3-5 pasos
-- implementa primero el camino feliz
-- luego agrega validaciones
-- por ultimo agrega tests
+- read the prompt once
+- write down 3-5 steps
+- implement the happy path first
+- then add validation
+- add tests last
 
-Regla:
+Rule:
 
-- piensa en soluciones explicables y mantenibles
-- no busques impresionar con arquitectura innecesaria
+- aim for solutions that are explainable and maintainable
+- do not try to impress with unnecessary architecture

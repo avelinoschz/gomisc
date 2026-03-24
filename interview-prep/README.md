@@ -1,55 +1,55 @@
 # Interview Prep
 
-Esta carpeta contiene una ruta de preparacion intensiva para una prueba tecnica de Go con enfoque backend/platform.
+This directory contains an intensive preparation track for a Go technical interview with a backend/platform focus.
 
-Objetivos:
+Goals:
 
-- recuperar velocidad escribiendo Go de memoria
-- practicar HTTP, JSON, tests, cache y concurrencia
-- ensayar conversacion tecnica de platform engineering
+- regain speed writing Go from memory
+- practice HTTP, JSON, tests, caching, and concurrency
+- rehearse platform-engineering interview discussions
 
-Reglas de uso:
+Usage rules:
 
-1. Avanza en orden. Cada bloque asume el anterior.
-2. `00-warmup/ex01-copy-by-hand` es el unico ejercicio completamente resuelto.
-3. Del resto en adelante, el codigo es starter code o esqueletos pequenos.
-4. Intenta resolver primero sin ayuda y luego trae tu solucion para review.
-5. Si te atoras, lee el README del ejercicio antes de consultar documentacion externa.
+1. Move in order. Each block assumes the previous one.
+2. `00-warmup/ex01-copy-by-hand` is the only fully solved exercise.
+3. Everything after that uses starter code or small skeletons.
+4. Try to solve each exercise on your own before bringing it back for review.
+5. If you get stuck, read the exercise README before consulting external documentation.
 
-Comandos utiles:
+Helpful commands:
 
 ```bash
 go run ./interview-prep/00-warmup/ex01-copy-by-hand
 go test ./...
 ```
 
-Ruta sugerida:
+Suggested path:
 
-- Dia 1: `00-warmup` completo + `01-go-core/ex01`
-- Dia 2: resto de `01-go-core` + `02-http-json/ex01`
-- Dia 3: resto de `02-http-json` + `03-testing/ex01`
-- Dia 4: resto de `03-testing`
-- Dia 5: `04-cache-concurrency`
-- Dia 6: `05-mock-interview/mock01` + `06-platform-notes`
-- Dia 7: `05-mock-interview/mock02` + repaso de puntos debiles
+- Day 1: complete `00-warmup` + `01-go-core/ex01`
+- Day 2: the rest of `01-go-core` + `02-http-json/ex01`
+- Day 3: the rest of `02-http-json` + `03-testing/ex01`
+- Day 4: the rest of `03-testing`
+- Day 5: `04-cache-concurrency`
+- Day 6: `05-mock-interview/mock01` + `06-platform-notes`
+- Day 7: `05-mock-interview/mock02` + review weak points
 
-Convenciones:
+Conventions:
 
-- Enunciados y notas en espanol.
-- Codigo en ingles.
-- En backend, intenta mantener una forma consistente:
+- Write documentation and comments in English.
+- Keep code identifiers in English.
+- In backend exercises, aim for a consistent shape:
   - `handler`
   - `service`
-  - `store` o `cache`
-- Usa standard library por defecto.
+  - `store` or `cache`
+- Use the standard library by default.
 
-Checklist de progreso:
+Progress checklist:
 
-- [ ] Warmup completo
-- [ ] Go core completo
-- [ ] Primer handler HTTP sin consultar docs
-- [ ] Primer test con `httptest`
-- [ ] Cache en memoria con `sync.RWMutex`
-- [ ] Ejercicio con `context.Context`
-- [ ] Mock de 45-60 minutos
-- [ ] Repaso de notas de platform/cloud
+- [ ] Warmup completed
+- [ ] Go core completed
+- [ ] First HTTP handler without checking docs
+- [ ] First test with `httptest`
+- [ ] In-memory cache with `sync.RWMutex`
+- [ ] Exercise using `context.Context`
+- [ ] 45-60 minute mock interview
+- [ ] Review of platform/cloud notes

@@ -1,20 +1,20 @@
 # Optional: Redis with Docker
 
-Este bloque es opcional y queda fuera del camino critico.
+This block is optional and stays outside the critical path.
 
-Objetivo:
+Goal:
 
-- levantar Redis local
-- practicar `GET` y `SET`
-- conectar una version pequena de los ejercicios de cache
+- run Redis locally
+- practice `GET` and `SET`
+- connect a small version of the cache exercises
 
-Ruta sugerida:
+Suggested path:
 
-1. levantar Redis con Docker Compose
-2. validar conexion con `redis-cli`
-3. agregar una version minima de cache usando `go-redis/v9`
+1. start Redis with Docker Compose
+2. validate the connection with `redis-cli`
+3. add a minimal cache version using `go-redis/v9`
 
-Si lo hacemos:
+If we do it:
 
-- reutilizamos algun ejercicio de `04-cache-concurrency`
-- no reemplazamos la cache en memoria; solo la comparamos
+- reuse one of the `04-cache-concurrency` exercises
+- do not replace the in-memory cache; only compare against it

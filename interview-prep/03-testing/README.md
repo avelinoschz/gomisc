@@ -1,15 +1,15 @@
 # 03 Testing
 
-Este bloque existe para que tus soluciones ya no dependan solo de inspeccion visual.
+This block exists so your solutions no longer depend only on visual inspection.
 
-Prioridades:
+Priorities:
 
 - `testing`
 - table-driven tests
 - `httptest`
-- leer fallos rapido
-- cubrir camino feliz y errores importantes
+- read failures quickly
+- cover the happy path and important error cases
 
-Regla:
+Rule:
 
-- escribe pocos tests, pero que te den mucha informacion
+- write a small number of tests that give you a lot of signal

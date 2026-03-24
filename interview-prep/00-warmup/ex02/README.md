@@ -1,38 +1,38 @@
 # Warmup Ex02: Slice + Map Summary
 
-Objetivo:
+Goal:
 
-- practicar transformacion de datos
-- recorrer slices
-- acumular resultados en un map
-- devolver multiples valores
+- practice data transformation
+- iterate over slices
+- accumulate results in a map
+- return multiple values
 
-Enunciado:
+Prompt:
 
-Implementa `BuildDepartmentSummary`.
+Implement `BuildDepartmentSummary`.
 
-Entrada:
+Input:
 
-- una lista de empleados
+- a list of employees
 
-Salida:
+Output:
 
-- un `map[string]int` con total de empleados por departamento
-- un entero con el total de empleados activos
+- a `map[string]int` with the total number of employees per department
+- an integer with the total number of active employees
 
-Reglas:
+Rules:
 
-- ignora empleados con `Department == ""`
-- solo cuenta en `activeTotal` a los que tengan `Active == true`
-- el `map` debe incluir todos los departamentos validos aunque solo tengan un empleado
+- ignore employees with `Department == ""`
+- only count employees with `Active == true` in `activeTotal`
+- the `map` must include every valid department even if it only has one employee
 
-Criterio de terminado:
+Done criteria:
 
-- compila
-- usa un solo loop principal
-- no usa paquetes externos
+- it compiles
+- it uses a single main loop
+- it does not use external packages
 
-Comando:
+Command:
 
 ```bash
 go run ./interview-prep/00-warmup/ex02

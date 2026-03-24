@@ -1,39 +1,39 @@
 # Mock 01: Catalog Endpoint with Cache
 
-Duracion objetivo:
+Target duration:
 
-- 45 a 60 minutos
+- 45 to 60 minutes
 
-Problema:
+Problem:
 
-Implementa un servicio HTTP con endpoint:
+Implement an HTTP service with this endpoint:
 
 - `GET /catalog?sku=...`
 
-Comportamiento:
+Behavior:
 
-- valida `sku`
-- primero revisa cache
-- si no existe, consulta una fuente primaria simulada
-- si el producto existe, responde JSON y guarda el resultado en cache
-- si no existe, responde `404`
+- validate `sku`
+- check the cache first
+- if it is missing, query a simulated primary source
+- if the product exists, respond with JSON and store the result in the cache
+- if it does not exist, respond with `404`
 
-Restricciones:
+Constraints:
 
-- usa solo standard library
-- no uses frameworks
-- manten una separacion razonable entre handler, service y cache
+- use only the standard library
+- do not use frameworks
+- keep a reasonable separation between handler, service, and cache
 
-Checklist de evaluacion:
+Evaluation checklist:
 
-- codigo compila
-- handler claro
-- errores y status codes correctos
-- cache hit/miss claro
-- tests basicos presentes
+- code compiles
+- clear handler
+- correct errors and status codes
+- clear cache hit/miss behavior
+- basic tests included
 
-Discusion de diseno:
+Design discussion:
 
-- como cambiaria esto si corriera en Cloud Run
-- que observabilidad agregarias
-- donde pondrias timeouts y por que
+- how this would change if it ran on Cloud Run
+- what observability you would add
+- where you would place timeouts and why

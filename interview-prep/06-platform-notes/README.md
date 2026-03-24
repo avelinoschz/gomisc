@@ -1,16 +1,16 @@
 # 06 Platform Notes
 
-Estas notas no son para memorizar palabra por palabra.
+These notes are not meant to be memorized word for word.
 
-Usalas para:
+Use them to:
 
-- practicar respuestas cortas
-- convertir experiencia previa en lenguaje de platform engineering
-- ensayar tradeoffs de despliegue, operacion y automatizacion
+- practice short answers
+- translate previous experience into platform-engineering language
+- rehearse deployment, operations, and automation tradeoffs
 
-Formato recomendado de practica:
+Recommended practice format:
 
-1. Lee un tema.
-2. Intenta responder en voz alta sin ver la respuesta.
-3. Regresa y compara.
-4. Resume la idea en 3-4 frases maximo.
+1. Read one topic.
+2. Try to answer out loud without looking at the response.
+3. Come back and compare.
+4. Summarize the idea in 3-4 sentences max.

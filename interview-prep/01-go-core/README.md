@@ -1,16 +1,16 @@
 # 01 Go Core
 
-Este bloque ya se parece mas a backend real.
+This block already looks much closer to real backend work.
 
-Prioridades:
+Priorities:
 
 - parsing
-- validacion
-- errores claros
-- funciones pequenas
-- interfaces solo cuando agregan valor
-- separar logica de negocio de detalles de almacenamiento
+- validation
+- clear errors
+- small functions
+- interfaces only when they add value
+- separate business logic from storage details
 
 Tip:
 
-- si una solucion necesita demasiados tipos, probablemente se esta complicando de mas
+- if a solution needs too many types, it is probably getting more complex than it needs to be

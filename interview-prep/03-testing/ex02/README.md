@@ -1,21 +1,21 @@
 # Testing Ex02: Handler Tests with httptest
 
-Objetivo:
+Goal:
 
-- probar un handler sin levantar un servidor real
-- validar status code y body JSON
+- test a handler without starting a real server
+- validate the status code and JSON body
 
-Enunciado:
+Prompt:
 
-Escribe tests para `catalogHandler`.
+Write tests for `catalogHandler`.
 
-Casos minimos:
+Minimum cases:
 
-- `400` cuando falta `sku`
-- `404` cuando no existe
-- `200` con JSON valido cuando existe
+- `400` when `sku` is missing
+- `404` when the product does not exist
+- `200` with valid JSON when the product exists
 
 Tip:
 
-- usa `httptest.NewRequest`
-- usa `httptest.NewRecorder`
+- use `httptest.NewRequest`
+- use `httptest.NewRecorder`

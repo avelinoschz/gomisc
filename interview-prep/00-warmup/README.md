@@ -1,18 +1,18 @@
 # 00 Warmup
 
-Este bloque existe para reactivar memoria muscular y velocidad de escritura.
+This block exists to reactivate muscle memory and writing speed.
 
-Prioridades:
+Priorities:
 
 - `struct`
-- methods con receiver
+- methods with receivers
 - `slice`
 - `map`
 - `if`, `for`, `switch`
-- errores simples
-- lectura de firmas comunes
+- simple errors
+- reading common function signatures
 
-Regla del bloque:
+Block rule:
 
-- `ex01-copy-by-hand`: copialo a mano en otro archivo o vuelve a escribirlo sin mirar.
-- `ex02` y `ex03`: resuelvelos desde cero a partir del starter.
+- `ex01-copy-by-hand`: copy it by hand into another file or rewrite it without looking.
+- `ex02` and `ex03`: solve them from scratch starting from the starter code.

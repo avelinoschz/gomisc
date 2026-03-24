@@ -1,27 +1,27 @@
 # Observability and Troubleshooting
 
-## Resumen corto
+## Short Summary
 
-En un rol de platform/backend importa mucho poder aislar si el problema es de codigo, configuracion, red, dependencia externa o despliegue.
+In a platform/backend role, it matters a lot to isolate whether the problem comes from code, configuration, networking, an external dependency, or deployment.
 
-## Cosas que deberias mencionar con naturalidad
+## Things You Should Mention Naturally
 
-- logs estructurados
-- metricas basicas de latencia, error rate y throughput
-- request IDs o trace IDs
+- structured logs
+- basic metrics for latency, error rate, and throughput
+- request IDs or trace IDs
 - health checks
-- timeouts y retries con criterio
+- timeouts and retries used with intent
 
-## Preguntas tipicas
+## Typical Questions
 
-### Como investigarias un servicio lento en produccion
+### How would you investigate a slow service in production
 
-Empezaria revisando metricas y logs para acotar si es general o puntual, luego veria dependencias externas, latencia por endpoint y cambios recientes de despliegue o configuracion.
+I would start by reviewing metrics and logs to narrow down whether the issue is broad or isolated, then check external dependencies, per-endpoint latency, and recent deployment or configuration changes.
 
-### Que agregarias a un servicio nuevo
+### What would you add to a new service
 
-- logs estructurados
-- metricas de requests
-- health endpoint
-- timeouts en clientes externos
-- dashboards y alertas basicas
+- structured logs
+- request metrics
+- a health endpoint
+- timeouts on external clients
+- basic dashboards and alerts

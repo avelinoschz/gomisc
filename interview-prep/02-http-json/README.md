@@ -1,18 +1,18 @@
 # 02 HTTP JSON
 
-Aqui empieza el bloque mas parecido a la prueba tecnica.
+This is the block that looks the most like the technical interview.
 
-Prioridades:
+Priorities:
 
 - `net/http`
 - `encoding/json`
 - query params
-- decode de body
-- validacion simple
-- respuestas JSON consistentes
-- introducir `context.Context` sin rebuscar
+- body decoding
+- simple validation
+- consistent JSON responses
+- introduce `context.Context` without overcomplicating things
 
-Regla:
+Rule:
 
-- evita frameworks
-- piensa en codigo que podrias explicar en 2-3 minutos
+- avoid frameworks
+- aim for code you could explain in 2-3 minutes

@@ -1,27 +1,27 @@
 # Warmup Ex03: Pointer Receivers + Interface
 
-Objetivo:
+Goal:
 
-- practicar receivers con puntero
-- recordar interfaces pequenas
-- separar logica de estado de salida por consola
+- practice pointer receivers
+- refresh small interfaces
+- separate state logic from console output
 
-Enunciado:
+Prompt:
 
-Completa el `TaskList` para que:
+Complete `TaskList` so that:
 
-- `Add` agregue una tarea no vacia
-- `Complete` marque una tarea como completada por titulo
-- `Stats` devuelva total y completadas
-- `ConsolePrinter` imprima el resumen usando la interfaz `StatsReporter`
+- `Add` adds a non-empty task
+- `Complete` marks a task as completed by title
+- `Stats` returns total and completed counts
+- `ConsolePrinter` prints the summary using the `StatsReporter` interface
 
-Reglas:
+Rules:
 
-- si el titulo viene vacio, regresa error
-- si `Complete` no encuentra la tarea, regresa error
-- evita sobreingenieria
+- if the title is empty, return an error
+- if `Complete` cannot find the task, return an error
+- avoid overengineering
 
-Comando:
+Command:
 
 ```bash
 go run ./interview-prep/00-warmup/ex03

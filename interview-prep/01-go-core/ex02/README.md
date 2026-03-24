@@ -1,28 +1,28 @@
 # Go Core Ex02: Composition and Errors
 
-Objetivo:
+Goal:
 
-- practicar composicion simple
-- usar errores para cortar flujo invalido
-- preparar la mente para separar `service` y `store`
+- practice simple composition
+- use errors to stop invalid flow
+- get used to separating `service` and `store`
 
-Enunciado:
+Prompt:
 
-Completa `DeploymentPlanner`.
+Complete `DeploymentPlanner`.
 
-Debe recibir:
+It must receive:
 
-- ambiente
-- nombre de servicio
-- replicas deseadas
+- environment
+- service name
+- desired replicas
 
-Debe validar:
+It must validate:
 
-- ambiente permitido: `dev`, `stage`, `prod`
-- servicio no vacio
-- replicas positivas
-- en `prod`, replicas minimas de 2
+- allowed environment: `dev`, `stage`, `prod`
+- non-empty service name
+- positive replicas
+- in `prod`, a minimum of 2 replicas
 
-Salida:
+Output:
 
-- un `DeploymentPlan` listo para imprimirse o usarse despues
+- a `DeploymentPlan` ready to print or use later

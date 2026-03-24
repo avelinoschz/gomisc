@@ -1,23 +1,23 @@
 # HTTP Ex01: GET + Query Params + JSON
 
-Objetivo:
+Goal:
 
-- implementar un handler `GET`
-- leer query params
-- responder JSON
+- implement a `GET` handler
+- read query params
+- respond with JSON
 
-Enunciado:
+Prompt:
 
-Completa el endpoint `GET /catalog?sku=...`.
+Complete the `GET /catalog?sku=...` endpoint.
 
-Comportamiento esperado:
+Expected behavior:
 
-- si falta `sku`, responder `400`
-- si no existe, responder `404`
-- si existe, responder `200` con JSON del producto
+- if `sku` is missing, respond with `400`
+- if it does not exist, respond with `404`
+- if it exists, respond with `200` and the product JSON
 
-Notas:
+Notes:
 
-- usa el catalogo en memoria ya incluido
-- no necesitas base de datos
-- manten la respuesta simple y clara
+- use the in-memory catalog that is already included
+- you do not need a database
+- keep the response simple and clear

@@ -1,36 +1,36 @@
 # Go Core Ex01: Parse and Validate
 
-Objetivo:
+Goal:
 
-- practicar parsing de texto a structs
-- dividir validaciones en funciones pequenas
-- escribir errores utiles
+- practice parsing text into structs
+- split validation into small functions
+- write useful errors
 
-Enunciado:
+Prompt:
 
-Implementa `ParseServices`.
+Implement `ParseServices`.
 
-Formato de entrada:
+Input format:
 
-- una linea por servicio
-- cada linea viene como `name,team,replicas`
+- one line per service
+- each line uses the format `name,team,replicas`
 
-Ejemplo:
+Example:
 
 ```text
 catalog,platform,3
 checkout,commerce,2
 ```
 
-Reglas:
+Rules:
 
-- `name` y `team` son obligatorios
-- `replicas` debe ser entero positivo
-- si una linea es invalida, regresa error y detente
-- ignora lineas vacias
+- `name` and `team` are required
+- `replicas` must be a positive integer
+- if a line is invalid, return an error and stop
+- ignore empty lines
 
-Criterio de terminado:
+Done criteria:
 
-- parsing claro
-- errores con contexto suficiente
-- sin paquetes externos
+- clear parsing
+- errors with enough context
+- no external packages

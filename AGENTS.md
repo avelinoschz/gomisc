@@ -24,6 +24,7 @@ Examples are meant to be quick memory aids that are easy to revisit later.
 - Start each snippet with a short header comment explaining what it shows.
 - Use inline comments only when they explain intent or Go-specific behavior.
 - Do not comment obvious syntax or narrate every line.
+- Write all comments, README content, exercise instructions, and other documentation in English.
 
 ## Validation
 

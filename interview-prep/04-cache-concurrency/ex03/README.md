@@ -1,20 +1,20 @@
 # Concurrency Ex03: Context Cancellation
 
-Objetivo:
+Goal:
 
-- practicar `context.Context`
-- recordar como abortar trabajo cuando el caller ya no quiere esperar
+- practice `context.Context`
+- remember how to stop work when the caller no longer wants to wait
 
-Enunciado:
+Prompt:
 
-Completa `SlowFetcher.Fetch`.
+Complete `SlowFetcher.Fetch`.
 
-Comportamiento esperado:
+Expected behavior:
 
-- si el contexto se cancela antes del delay, regresa `context.Canceled` o `context.DeadlineExceeded`
-- si alcanza a terminar, regresa el valor
+- if the context is canceled before the delay finishes, return `context.Canceled` or `context.DeadlineExceeded`
+- if it finishes in time, return the value
 
-Pista:
+Hint:
 
-- usa `select`
-- combina `time.After` con `<-ctx.Done()`
+- use `select`
+- combine `time.After` with `<-ctx.Done()`

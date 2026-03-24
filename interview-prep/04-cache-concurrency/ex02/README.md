@@ -1,21 +1,21 @@
 # Cache Ex02: Fetch with Fallback
 
-Objetivo:
+Goal:
 
-- simular un servicio que primero consulta cache y luego una fuente lenta
-- practicar flujo `cache hit` y `cache miss`
+- simulate a service that checks the cache first and then falls back to a slower source
+- practice `cache hit` and `cache miss` flow
 
-Enunciado:
+Prompt:
 
-Completa `CatalogService.GetProductName`.
+Complete `CatalogService.GetProductName`.
 
-Comportamiento esperado:
+Expected behavior:
 
-- si el valor existe en cache, lo regresa de inmediato
-- si no existe, usa `ProductFetcher`
-- si el fetch funciona, guarda el resultado en cache
-- si el fetch falla, regresa error
+- if the value exists in the cache, return it immediately
+- if it does not exist, use `ProductFetcher`
+- if the fetch succeeds, store the result in the cache
+- if the fetch fails, return an error
 
-Meta:
+Goal:
 
-- que el flujo quede muy claro al leerlo
+- make the flow very clear when someone reads it

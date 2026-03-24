@@ -1,17 +1,17 @@
 # Testing Ex03: Error Cases and Invalid JSON
 
-Objetivo:
+Goal:
 
-- practicar casos negativos
-- ganar velocidad revisando errores de decode y status codes
+- practice negative cases
+- get faster at reviewing decode errors and status codes
 
-Enunciado:
+Prompt:
 
-Completa `createProductHandler` y despues escribe tests.
+Complete `createProductHandler` and then write tests.
 
-Casos minimos:
+Minimum cases:
 
-- `400` para JSON invalido
-- `400` para payload invalido
-- `201` para producto valido
-- `409` si el SKU ya existe
+- `400` for invalid JSON
+- `400` for an invalid payload
+- `201` for a valid product
+- `409` if the SKU already exists

@@ -1,27 +1,27 @@
 # Go Core Ex03: In-Memory Service
 
-Objetivo:
+Goal:
 
-- introducir una interfaz pequena con sentido
-- separar `service` y `store`
-- practicar errores de negocio
+- introduce a small interface that actually helps
+- separate `service` and `store`
+- practice business-level errors
 
-Enunciado:
+Prompt:
 
-Implementa un mini flujo de onboarding de aplicaciones.
+Implement a small application onboarding flow.
 
-Necesitas:
+You need:
 
-- `AppStore` con `Save` y `GetByName`
+- `AppStore` with `Save` and `GetByName`
 - `InMemoryAppStore`
 - `AppService.Register`
 
-Reglas:
+Rules:
 
-- `Name` y `OwnerTeam` son obligatorios
-- no se permiten nombres duplicados
-- `Register` debe delegar persistencia al store
+- `Name` and `OwnerTeam` are required
+- duplicate names are not allowed
+- `Register` must delegate persistence to the store
 
-Meta:
+Goal:
 
-- que el codigo te recuerde a una version pequena de backend real
+- make the code feel like a small version of a real backend service

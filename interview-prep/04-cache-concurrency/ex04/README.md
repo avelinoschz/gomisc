@@ -1,25 +1,25 @@
-# Concurrency Ex04: Fan-In Basico
+# Concurrency Ex04: Basic Fan-In
 
-Objetivo:
+Goal:
 
-- coordinar dos consultas concurrentes
-- usar channels sin complicar de mas la solucion
+- coordinate two concurrent lookups
+- use channels without making the solution more complex than necessary
 
-Enunciado:
+Prompt:
 
-Tienes dos funciones proveedoras:
+You have two provider functions:
 
-- una trae precio
-- otra trae stock
+- one fetches price
+- one fetches stock
 
-Completa `LoadSnapshot` para que:
+Complete `LoadSnapshot` so that it:
 
-- ejecute ambas al mismo tiempo
-- espere ambos resultados
-- combine todo en un `ProductSnapshot`
-- si alguna falla, regrese error
+- runs both at the same time
+- waits for both results
+- combines everything into a `ProductSnapshot`
+- returns an error if either call fails
 
-Restriccion:
+Restriction:
 
-- no uses `sync.WaitGroup`
-- resuelvelo con channels porque ese es el musculo que queremos practicar aqui
+- do not use `sync.WaitGroup`
+- solve it with channels because that is the skill we want to practice here
