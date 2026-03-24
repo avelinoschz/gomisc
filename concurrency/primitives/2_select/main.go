@@ -1,3 +1,5 @@
+// This snippet shows how to use select to wait on multiple channels.
+// It serves as a minimal example of coordination between concurrent goroutines.
 package main
 
 import (

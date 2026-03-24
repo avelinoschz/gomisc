@@ -1,3 +1,5 @@
+// This snippet implements the Fisher-Yates algorithm to shuffle a slice.
+// It also leaves the swap process visible to make each shuffle step easier to follow.
 package main
 
 import (

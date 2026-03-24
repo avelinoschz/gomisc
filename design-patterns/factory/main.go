@@ -1,3 +1,5 @@
+// This snippet implements a small version of the Factory pattern.
+// It is used to create different transports from a shared abstraction.
 package main
 
 import (

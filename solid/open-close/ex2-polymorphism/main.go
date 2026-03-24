@@ -1,3 +1,5 @@
+// This snippet shows Open/Closed through interfaces and polymorphism.
+// The idea is to add new shapes without changing the calculator logic.
 package main
 
 import (

@@ -1,3 +1,5 @@
+// This snippet implements a simple queue using slices.
+// It helps recall FIFO semantics with Enqueue and Dequeue operations.
 package main
 
 import "fmt"

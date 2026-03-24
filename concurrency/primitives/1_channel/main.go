@@ -1,3 +1,5 @@
+// This snippet shows the basic usage of an unbuffered channel.
+// It works as a quick reminder of how send and receive synchronize goroutines.
 package main
 
 import (

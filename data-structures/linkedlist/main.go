@@ -1,3 +1,5 @@
+// This snippet implements a simple linked list with prepend, append, and traversal.
+// It works as a compact reference for linked nodes in Go.
 package main
 
 import (

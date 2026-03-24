@@ -1,3 +1,5 @@
+// This snippet explores Open/Closed through composition instead of inheritance.
+// It shows how to extend behavior without modifying the base struct.
 package main
 
 import "fmt"

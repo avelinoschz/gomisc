@@ -1,3 +1,5 @@
+// This snippet uses a done channel to stop a goroutine explicitly.
+// It captures a common cooperative cancellation pattern in Go.
 package main
 
 import (

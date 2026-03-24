@@ -1,3 +1,5 @@
+// This snippet implements a minimal stack using slices.
+// It is a quick reference for Push and Pop operations with LIFO behavior.
 package main
 
 import "fmt"

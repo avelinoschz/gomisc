@@ -1,3 +1,5 @@
+// This snippet illustrates substituting implementations behind an interface.
+// It serves as a simple example of the Liskov principle in Go.
 package main
 
 import "fmt"
