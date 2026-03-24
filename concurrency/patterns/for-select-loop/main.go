@@ -1,8 +1,6 @@
 // This snippet iterates over a channel with for-range after filling and closing it.
 // It is a short reference for a basic producer/consumer pattern with channels.
-
-// kantan-coding https://www.youtube.com/watch?v=qyM8Pi1KiiM
-
+// Source: kantan-coding https://www.youtube.com/watch?v=qyM8Pi1KiiM
 package main
 
 import (

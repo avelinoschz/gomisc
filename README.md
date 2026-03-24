@@ -6,20 +6,25 @@ The goal of this project is to keep a simple archive of small examples, quick ex
 
 ## What Is Here
 
+- `algorithms/`: small algorithm-focused examples.
 - `concurrency/`: small primitives and patterns with goroutines, channels, `select`, and cancellation signals.
 - `data-structures/`: simple implementations of stack, queue, and linked list.
 - `design-patterns/`: short examples of classic patterns applied in Go.
 - `solid/`: small snippets centered around SOLID principles.
-- `fisher-yates/`: an implementation of the Fisher-Yates shuffle algorithm.
+
+## Naming Convention
+
+Folders use descriptive slugs so examples are easy to revisit later. The repo is organized by topic first, then by a short example name such as `channel-basic`, `done-channel`, or `fisher-yates`.
 
 ## How To Use It
 
 Each folder contains self-contained examples, usually in a `main.go`, so they can be read quickly or run independently.
 
 ```bash
-go run ./fisher-yates
+go run ./algorithms/fisher-yates
 go run ./data-structures/stack
-go run ./concurrency/primitives/1_channel
+go run ./concurrency/primitives/channel-basic
+go run ./solid/open-closed/polymorphism
 ```
 
 ## Note
