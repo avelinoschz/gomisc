@@ -1,34 +1,21 @@
-// This snippet iterates over a channel with for-range after filling and closing it.
-// It is a short reference for a basic producer/consumer pattern with channels.
+// This snippet fills a channel, closes it, and reads it with for-range.
+// Closing the channel matters here because range stops only after the channel is closed.
 // Source: kantan-coding https://www.youtube.com/watch?v=qyM8Pi1KiiM
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	// using buffered channels, makes the usage of goroutines and channels async
-	// this is because the sending goroutine can place multiple data to the channel
-	// and continue it's work. if the channel is full, then the sending goroutine
-	// will be block until there is more space in the channel
-	charChannel := make(chan string, 3)
-	chars := []string{"a", "b", "c"}
+	letters := make(chan string, 3)
+	values := []string{"a", "b", "c"}
 
-	for _, c := range chars {
-		select {
-		case charChannel <- c:
-		}
-		// in this specific case, a simple send/receive can be used
-		// charChannel <- c
+	for _, value := range values {
+		letters <- value
 	}
 
-	// because there is a range below, we need to explicitly `close` the channel
-	// if not a deadlock will be caused, because will range forever
-	close(charChannel)
+	close(letters)
 
-	// we can iterate a channel with `for range` to retrieve its data
-	for data := range charChannel {
-		fmt.Println(data)
+	for letter := range letters {
+		fmt.Println(letter)
 	}
 }

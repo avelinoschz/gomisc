@@ -1,10 +1,8 @@
 // This snippet implements a simple linked list with prepend, append, and traversal.
-// It works as a compact reference for linked nodes in Go.
+// It keeps only the basic operations needed to remember the shape of the structure.
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type LinkedList struct {
 	Head *Node
@@ -15,67 +13,46 @@ type Node struct {
 	Next *Node
 }
 
-func (ll *LinkedList) Prepend(n *Node) {
+func (ll *LinkedList) Prepend(node *Node) {
 	if ll.Head == nil {
-		ll.Head = n
+		ll.Head = node
 		return
 	}
 
-	next := ll.Head
-	ll.Head = n
-
-	ll.Head.Next = next
+	node.Next = ll.Head
+	ll.Head = node
 }
 
-func (ll *LinkedList) Append(n *Node) {
+func (ll *LinkedList) Append(node *Node) {
 	if ll.Head == nil {
-		ll.Head = n
+		ll.Head = node
 		return
 	}
 
-	currentNode := ll.Head
-	for currentNode.Next != nil {
-		currentNode = currentNode.Next
+	current := ll.Head
+	for current.Next != nil {
+		current = current.Next
 	}
-	currentNode.Next = n
+
+	current.Next = node
 }
 
-// List() turns the values into a slice
-// only for displaying purposes
 func (ll *LinkedList) List() []int {
-	if ll == nil {
-		return nil
-	}
-
 	var list []int
-	currentNode := ll.Head
-	for currentNode != nil {
-		list = append(list, currentNode.Data)
-		currentNode = currentNode.Next
+	current := ll.Head
+	for current != nil {
+		list = append(list, current.Data)
+		current = current.Next
 	}
 
 	return list
 }
 
 func main() {
-	ll := &LinkedList{
-		Head: &Node{
-			Data: 0,
-		},
-	}
-	ll.Prepend(&Node{
-		Data: 1,
-	})
-	ll.Prepend(&Node{
-		Data: 2,
-	})
-	ll.Prepend(&Node{
-		Data: 3,
-	})
-	ll.Append(&Node{
-		Data: 4,
-	})
+	ll := &LinkedList{}
+	ll.Append(&Node{Data: 2})
+	ll.Prepend(&Node{Data: 1})
+	ll.Append(&Node{Data: 3})
 
-	fmt.Printf("%+v\n", ll)
 	fmt.Println(ll.List())
 }

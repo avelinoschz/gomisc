@@ -1,5 +1,5 @@
 // This snippet shows how to use select to wait on multiple channels.
-// It serves as a minimal example of coordination between concurrent goroutines.
+// It continues with whichever channel becomes ready first.
 package main
 
 import (
@@ -8,28 +8,25 @@ import (
 )
 
 func main() {
-	msgChan := make(chan string)
-	anotherChan := make(chan string)
+	slowChan := make(chan string)
+	fastChan := make(chan string)
 
 	go func() {
-		time.Sleep(time.Second * 3)
-		msgChan <- "data string 1"
+		time.Sleep(400 * time.Millisecond)
+		slowChan <- "slow message"
 	}()
 
 	go func() {
-		time.Sleep(time.Second * 1)
-		anotherChan <- "data string 2"
+		time.Sleep(100 * time.Millisecond)
+		fastChan <- "fast message"
 	}()
 
-	fmt.Println("receiving message...")
+	fmt.Println("waiting for the first message...")
 
-	// select let the goroutine wait on multiple communication operations
-	// in this case, let the main function wait on messages from multiple channels
-	// if messages are at the same time, select will choose one randomly
 	select {
-	case msg := <-msgChan:
+	case msg := <-slowChan:
 		fmt.Println(msg)
-	case anotherMsg := <-anotherChan:
-		fmt.Println(anotherMsg)
+	case msg := <-fastChan:
+		fmt.Println(msg)
 	}
 }

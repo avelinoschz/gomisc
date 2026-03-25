@@ -1,5 +1,5 @@
 // This snippet uses a done channel to stop a goroutine explicitly.
-// It captures a common cooperative cancellation pattern in Go.
+// Closing the channel broadcasts the stop signal to every receiver.
 package main
 
 import (
@@ -8,30 +8,26 @@ import (
 )
 
 func main() {
-	done := make(chan bool)
+	done := make(chan struct{})
 
 	go doWork(done)
 
-	time.Sleep(time.Second * 2)
-
-	//this esentially sends a zero value to the chan
+	time.Sleep(350 * time.Millisecond)
 	close(done)
 
-	// this ends the execution of the goroutine too
-	// done <- true
+	// Give the worker a moment to print its stop message before main exits.
+	time.Sleep(50 * time.Millisecond)
 }
 
-// here is receiving a read only channel
-// that's why it has the receiving data syntax
-// the for-select pattern works here because we are waiting for a signal
-// while doing the default job of the goroutine
-func doWork(done <-chan bool) {
+func doWork(done <-chan struct{}) {
 	for {
 		select {
-		case <-done: // whenever it receives any value, finishes
+		case <-done:
+			fmt.Println("stopping worker")
 			return
 		default:
-			fmt.Println("doing work infinitely")
+			fmt.Println("working...")
+			time.Sleep(100 * time.Millisecond)
 		}
 	}
 }

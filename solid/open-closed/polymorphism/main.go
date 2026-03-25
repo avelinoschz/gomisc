@@ -1,5 +1,5 @@
 // This snippet shows Open/Closed through interfaces and polymorphism.
-// The idea is to add new shapes without changing the calculator logic.
+// The calculator depends on the Shape interface, so new shapes do not change it.
 package main
 
 import (
@@ -7,65 +7,38 @@ import (
 	"math"
 )
 
-// this example is also the implementation of another SOLID principle
-// the dependency inversion principle. rely on abstractions rather than impls
-
-type circle struct {
-	radius float64
+type Shape interface {
+	Area() float64
 }
 
-func (c circle) area() float64 {
-	return math.Pi * c.radius * c.radius
+type Circle struct {
+	Radius float64
 }
 
-type square struct {
-	length float64
+func (c Circle) Area() float64 {
+	return math.Pi * c.Radius * c.Radius
 }
 
-func (s square) area() float64 {
-	return s.length * s.length
+type Square struct {
+	Length float64
 }
 
-type shape interface {
-	area() float64
+func (s Square) Area() float64 {
+	return s.Length * s.Length
 }
 
-type calculator struct{}
-
-// // this is the problem to solve. in this case we would need to modify this
-// // to extend the functionality of areaSum() to support other shapes
-// func (c *calculator) areaSum(shapes ...interface{}) float64 {
-// 	var sum float64
-// 	for _, shape := range shapes {
-// 		switch shape.(type) {
-// 		case circle:
-// 			r := shape.(circle).radius
-// 			sum += math.Pi * r * r
-// 		case square:
-// 			l := shape.(square).length
-// 			sum += l * l
-// 		}
-// 		fmt.Println(sum)
-// 	}
-
-// 	return sum
-// }
-
-// relying on the usage of interfaces, we can extend the functionality
-// of the concrete struct without changing this code, and support
-// other shapes
-func (c *calculator) areaSum(shapes ...shape) float64 {
+// Without the interface, this function would need a type switch for every new shape.
+func areaSum(shapes ...Shape) float64 {
 	var sum float64
 	for _, shape := range shapes {
-		sum += shape.area()
+		sum += shape.Area()
 	}
 	return sum
 }
 
 func main() {
-	c := circle{radius: 5}
-	s := square{length: 7}
-	calc := calculator{}
-	sum := calc.areaSum(c, s)
-	fmt.Println(sum)
+	circle := Circle{Radius: 5}
+	square := Square{Length: 7}
+
+	fmt.Println(areaSum(circle, square))
 }

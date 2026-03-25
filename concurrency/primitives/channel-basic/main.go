@@ -1,5 +1,5 @@
 // This snippet shows the basic usage of an unbuffered channel.
-// It works as a quick reminder of how send and receive synchronize goroutines.
+// The send blocks until another goroutine receives the value.
 package main
 
 import (
@@ -7,25 +7,15 @@ import (
 	"time"
 )
 
-// primitives: goroutines, channels, select
 func main() {
-	// unbuffered channel
-	// this makes -in a way- the usage of channel synchronous
-	// because the sender turns to a waiting state (blocked)
-	// until the receiver, receives the data
 	msgChan := make(chan string)
 
-	// async goroutine
-	// anonymous function
 	go func() {
-		time.Sleep(time.Second * 3)
-		msgChan <- "data string"
+		time.Sleep(500 * time.Millisecond)
+		msgChan <- "hello from another goroutine"
 	}()
+
 	fmt.Println("receiving message...")
-
-	// blocking operation
-	// waiting for data in the channel
 	msg := <-msgChan
-
 	fmt.Println("message received:", msg)
 }
