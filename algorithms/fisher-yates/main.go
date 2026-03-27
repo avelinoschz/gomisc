@@ -1,5 +1,5 @@
 // This snippet implements the Fisher-Yates algorithm to shuffle a slice.
-// It also leaves the swap process visible to make each shuffle step easier to follow.
+// It swaps each element with a random earlier position.
 package main
 
 import (
@@ -9,36 +9,20 @@ import (
 )
 
 func main() {
+	values := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	shuffled := shuffle(append([]int(nil), values...))
 
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-
-	fmt.Println("sorted array:", arr)
-
-	shuffled := shuffle(arr)
-
-	fmt.Println("shuffled array:", shuffled)
+	fmt.Println("original:", values)
+	fmt.Println("shuffled:", shuffled)
 }
 
-func shuffle(arr []int) []int {
-	// deprecated Go 1.20
-	// rand.Seed(time.Now().UnixNano())
+func shuffle(values []int) []int {
+	random := rand.New(rand.NewSource(time.Now().UnixNano()))
 
-	seed := time.Now().UnixNano()
-	r := rand.New(rand.NewSource(seed))
-
-	length := len(arr)
-
-	for i := length - 1; i > 0; i-- {
-		randIdx := r.Intn(i + 1)
-
-		fmt.Printf("idx to swap: %d and %d\n", i, randIdx)
-		fmt.Printf("vals to swap: %d and %d\n", arr[i], arr[randIdx])
-
-		arr[randIdx], arr[i] = arr[i], arr[randIdx]
-
-		fmt.Println(arr)
-		fmt.Println("")
+	for i := len(values) - 1; i > 0; i-- {
+		j := random.Intn(i + 1)
+		values[i], values[j] = values[j], values[i]
 	}
 
-	return arr
+	return values
 }

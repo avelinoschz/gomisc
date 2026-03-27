@@ -1,13 +1,9 @@
 // This snippet implements a simple queue using slices.
-// It helps recall FIFO semantics with Enqueue and Dequeue operations.
+// It is a quick reminder of FIFO behavior.
 package main
 
 import "fmt"
 
-// Queue structure implementation
-// FIFO (first in first out) behavior
-// items can be anything, this example uses
-// `int` for simplicity
 type Queue struct {
 	Items []int
 }
@@ -24,14 +20,11 @@ func (q *Queue) Dequeue() int {
 
 func main() {
 	q := &Queue{}
-	fmt.Println(q)
-
 	q.Enqueue(10)
 	q.Enqueue(20)
 	q.Enqueue(30)
-	fmt.Println(q)
 
-	dequeued := q.Dequeue()
-	fmt.Println(q)
-	fmt.Println(dequeued)
+	fmt.Println("queue:", q.Items)
+	fmt.Println("dequeued:", q.Dequeue())
+	fmt.Println("queue:", q.Items)
 }
