@@ -14,3 +14,9 @@ Priorities:
 Tip:
 
 - if a solution needs too many types, it is probably getting more complex than it needs to be
+
+## Run tests
+
+```bash
+go test ./interview-prep/01-go-core/...
+```

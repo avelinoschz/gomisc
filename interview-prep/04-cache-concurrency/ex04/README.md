@@ -23,3 +23,9 @@ Restriction:
 
 - do not use `sync.WaitGroup`
 - solve it with channels because that is the skill we want to practice here
+
+## Run tests
+
+```bash
+go test -race ./interview-prep/04-cache-concurrency/ex04
+```

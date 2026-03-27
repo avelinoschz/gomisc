@@ -25,3 +25,9 @@ Rules:
 Goal:
 
 - make the code feel like a small version of a real backend service
+
+## Run tests
+
+```bash
+go test ./interview-prep/01-go-core/ex03
+```

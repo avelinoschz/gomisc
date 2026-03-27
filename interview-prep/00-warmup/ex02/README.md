@@ -37,3 +37,9 @@ Command:
 ```bash
 go run ./interview-prep/00-warmup/ex02
 ```
+
+## Run tests
+
+```bash
+go test ./interview-prep/00-warmup/ex02
+```

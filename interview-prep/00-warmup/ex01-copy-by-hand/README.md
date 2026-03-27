@@ -25,3 +25,9 @@ Command:
 ```bash
 go run ./interview-prep/00-warmup/ex01-copy-by-hand
 ```
+
+## Run tests
+
+```bash
+go test ./interview-prep/00-warmup/ex01-copy-by-hand
+```

@@ -21,3 +21,9 @@ Minimum cases:
 - empty input
 - tags with uppercase letters and spaces
 - duplicate tags
+
+## Run tests
+
+```bash
+go test ./interview-prep/03-testing/ex01
+```

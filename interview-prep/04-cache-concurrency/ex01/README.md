@@ -25,3 +25,9 @@ Done criteria:
 - safe concurrent reads
 - safe writes
 - short and clear code
+
+## Run tests
+
+```bash
+go test -race ./interview-prep/04-cache-concurrency/ex01
+```

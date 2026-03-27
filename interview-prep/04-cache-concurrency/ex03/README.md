@@ -18,3 +18,9 @@ Hint:
 
 - use `select`
 - combine `time.After` with `<-ctx.Done()`
+
+## Run tests
+
+```bash
+go test -race ./interview-prep/04-cache-concurrency/ex03
+```

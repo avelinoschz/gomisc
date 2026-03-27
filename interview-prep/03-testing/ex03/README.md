@@ -15,3 +15,9 @@ Minimum cases:
 - `400` for an invalid payload
 - `201` for a valid product
 - `409` if the SKU already exists
+
+## Run tests
+
+```bash
+go test ./interview-prep/03-testing/ex03
+```

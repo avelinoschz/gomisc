@@ -16,3 +16,9 @@ Rule:
 
 - avoid frameworks
 - aim for code you could explain in 2-3 minutes
+
+## Run tests
+
+```bash
+go test ./interview-prep/02-http-json/...
+```

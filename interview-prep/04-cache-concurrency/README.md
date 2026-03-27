@@ -18,3 +18,9 @@ Rule:
 
 - aim for solutions that are reasonable in a 60-minute interview
 - avoid fancy patterns if a simpler solution works
+
+## Run tests
+
+```bash
+go test -race ./interview-prep/04-cache-concurrency/...
+```

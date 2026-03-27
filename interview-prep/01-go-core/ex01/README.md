@@ -34,3 +34,9 @@ Done criteria:
 - clear parsing
 - errors with enough context
 - no external packages
+
+## Run tests
+
+```bash
+go test ./interview-prep/01-go-core/ex01
+```

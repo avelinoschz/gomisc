@@ -26,3 +26,9 @@ It must validate:
 Output:
 
 - a `DeploymentPlan` ready to print or use later
+
+## Run tests
+
+```bash
+go test ./interview-prep/01-go-core/ex02
+```

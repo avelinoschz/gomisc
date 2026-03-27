@@ -21,3 +21,9 @@ Notes:
 - use the in-memory catalog that is already included
 - you do not need a database
 - keep the response simple and clear
+
+## Run tests
+
+```bash
+go test ./interview-prep/02-http-json/ex01
+```

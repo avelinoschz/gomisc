@@ -25,3 +25,9 @@ Rules:
 - `sku` and `name` are required
 - `price` must be greater than 0
 - if the `sku` already exists, respond with `409`
+
+## Run tests
+
+```bash
+go test ./interview-prep/02-http-json/ex02
+```

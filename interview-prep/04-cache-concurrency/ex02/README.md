@@ -19,3 +19,9 @@ Expected behavior:
 Goal:
 
 - make the flow very clear when someone reads it
+
+## Run tests
+
+```bash
+go test -race ./interview-prep/04-cache-concurrency/ex02
+```

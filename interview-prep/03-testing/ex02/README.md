@@ -19,3 +19,9 @@ Tip:
 
 - use `httptest.NewRequest`
 - use `httptest.NewRecorder`
+
+## Run tests
+
+```bash
+go test ./interview-prep/03-testing/ex02
+```

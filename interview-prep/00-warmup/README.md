@@ -16,3 +16,9 @@ Block rule:
 
 - `ex01-copy-by-hand`: copy it by hand into another file or rewrite it without looking.
 - `ex02` and `ex03`: solve them from scratch starting from the starter code.
+
+## Run tests
+
+```bash
+go test ./interview-prep/00-warmup/...
+```

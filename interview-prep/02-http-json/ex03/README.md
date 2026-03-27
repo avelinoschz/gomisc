@@ -26,3 +26,9 @@ When a serialization error happens:
 
 - respond with `500`
 - return a consistent error JSON body
+
+## Run tests
+
+```bash
+go test ./interview-prep/02-http-json/ex03
+```
