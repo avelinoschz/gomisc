@@ -26,6 +26,12 @@ Rules:
 - `price` must be greater than 0
 - if the `sku` already exists, respond with `409`
 
+Command:
+
+```bash
+go run ./go-refresher/02-http-json/ex02
+```
+
 ## Run tests
 
 ```bash

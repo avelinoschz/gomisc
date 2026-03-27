@@ -27,6 +27,12 @@ When a serialization error happens:
 - respond with `500`
 - return a consistent error JSON body
 
+Command:
+
+```bash
+go run ./go-refresher/02-http-json/ex03
+```
+
 ## Run tests
 
 ```bash

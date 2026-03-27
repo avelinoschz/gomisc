@@ -22,6 +22,12 @@ Notes:
 - you do not need a database
 - keep the response simple and clear
 
+Command:
+
+```bash
+go run ./go-refresher/02-http-json/ex01
+```
+
 ## Run tests
 
 ```bash

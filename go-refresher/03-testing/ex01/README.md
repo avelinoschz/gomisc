@@ -22,6 +22,12 @@ Minimum cases:
 - tags with uppercase letters and spaces
 - duplicate tags
 
+Command:
+
+```bash
+go run ./go-refresher/03-testing/ex01
+```
+
 ## Run tests
 
 ```bash

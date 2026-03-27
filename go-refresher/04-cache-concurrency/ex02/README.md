@@ -20,6 +20,12 @@ Goal:
 
 - make the flow very clear when someone reads it
 
+Command:
+
+```bash
+go run ./go-refresher/04-cache-concurrency/ex02
+```
+
 ## Run tests
 
 ```bash

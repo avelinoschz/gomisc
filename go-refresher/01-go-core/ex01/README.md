@@ -35,6 +35,12 @@ Done criteria:
 - errors with enough context
 - no external packages
 
+Command:
+
+```bash
+go run ./go-refresher/01-go-core/ex01
+```
+
 ## Run tests
 
 ```bash

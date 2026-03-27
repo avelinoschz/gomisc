@@ -26,6 +26,12 @@ Goal:
 
 - make the code feel like a small version of a real backend service
 
+Command:
+
+```bash
+go run ./go-refresher/01-go-core/ex03
+```
+
 ## Run tests
 
 ```bash

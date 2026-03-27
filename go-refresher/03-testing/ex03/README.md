@@ -16,6 +16,12 @@ Minimum cases:
 - `201` for a valid product
 - `409` if the SKU already exists
 
+Command:
+
+```bash
+go run ./go-refresher/03-testing/ex03
+```
+
 ## Run tests
 
 ```bash

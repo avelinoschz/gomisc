@@ -19,6 +19,12 @@ Hint:
 - use `select`
 - combine `time.After` with `<-ctx.Done()`
 
+Command:
+
+```bash
+go run ./go-refresher/04-cache-concurrency/ex03
+```
+
 ## Run tests
 
 ```bash

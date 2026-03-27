@@ -27,6 +27,12 @@ Output:
 
 - a `DeploymentPlan` ready to print or use later
 
+Command:
+
+```bash
+go run ./go-refresher/01-go-core/ex02
+```
+
 ## Run tests
 
 ```bash

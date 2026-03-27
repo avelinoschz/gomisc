@@ -26,6 +26,12 @@ Done criteria:
 - safe writes
 - short and clear code
 
+Command:
+
+```bash
+go run ./go-refresher/04-cache-concurrency/ex01
+```
+
 ## Run tests
 
 ```bash

@@ -20,6 +20,12 @@ Tip:
 - use `httptest.NewRequest`
 - use `httptest.NewRecorder`
 
+Command:
+
+```bash
+go run ./go-refresher/03-testing/ex02
+```
+
 ## Run tests
 
 ```bash
