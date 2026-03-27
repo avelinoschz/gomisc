@@ -17,12 +17,12 @@ func BuildDepartmentSummary(employees []Employee) (map[string]int, int) {
 	total := 0
 
 	for _, e := range employees {
-		if e.Active {
-			total += 1
-		}
-
 		if e.Department == "" {
 			continue
+		}
+
+		if e.Active {
+			total += 1
 		}
 
 		empPerDept[e.Department] += 1
