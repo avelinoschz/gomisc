@@ -23,6 +23,18 @@ go run ./go-refresher/00-warmup/ex01-copy-by-hand
 go test ./...
 ```
 
+## Redoing exercises
+
+Each completed exercise keeps a blank copy of the implementation under `_original/` (ignored by `go test ./...`). Use the Makefile at the repo root to reset or restore an exercise:
+
+```bash
+# Reset to blank state — backs up current solution as main.go.bak
+make reset EX=go-refresher/00-warmup/ex01-copy-by-hand
+
+# Restore the backed-up solution
+make restore EX=go-refresher/00-warmup/ex01-copy-by-hand
+```
+
 Suggested path:
 
 - Day 1: complete `00-warmup` + `01-go-core/ex01`
