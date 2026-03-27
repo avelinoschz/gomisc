@@ -22,10 +22,10 @@ func BuildDepartmentSummary(employees []Employee) (map[string]int, int) {
 		}
 
 		if e.Active {
-			total += 1
+			total++
 		}
 
-		empPerDept[e.Department] += 1
+		empPerDept[e.Department]++
 	}
 
 	return empPerDept, total

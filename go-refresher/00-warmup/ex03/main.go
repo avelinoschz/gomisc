@@ -24,7 +24,6 @@ func (t *TaskList) Add(title string) error {
 	}
 
 	t.tasks = append(t.tasks, Task{Title: title})
-
 	return nil
 }
 
@@ -41,12 +40,10 @@ func (t *TaskList) Complete(title string) error {
 }
 
 func (t *TaskList) Stats() (int, int) {
-	total := 0
+	total := len(t.tasks)
 	completed := 0
 
 	for _, task := range t.tasks {
-		total += 1
-
 		if task.Completed {
 			completed += 1
 		}
