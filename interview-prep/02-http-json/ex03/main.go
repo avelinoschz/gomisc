@@ -18,11 +18,15 @@ func writeError(w http.ResponseWriter, statusCode int, message string) {
 	// TODO: implement
 }
 
-func main() {
-	http.HandleFunc("GET /health", func(w http.ResponseWriter, r *http.Request) {
+func healthHandler() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		_ = json.NewEncoder
 		// TODO: implement
-	})
+	}
+}
+
+func main() {
+	http.HandleFunc("GET /health", healthHandler())
 
 	_ = http.ListenAndServe(":8080", nil)
 }

@@ -28,14 +28,18 @@ func (s *CatalogStore) Save(product Product) error {
 	return nil
 }
 
-func main() {
-	store := NewCatalogStore()
-
-	http.HandleFunc("POST /catalog", func(w http.ResponseWriter, r *http.Request) {
+func createCatalogHandler(store *CatalogStore) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		_ = store
 		_ = json.NewDecoder
 		// TODO: implement
-	})
+	}
+}
+
+func main() {
+	store := NewCatalogStore()
+
+	http.HandleFunc("POST /catalog", createCatalogHandler(store))
 
 	_ = http.ListenAndServe(":8080", nil)
 }

@@ -29,14 +29,18 @@ func (s CatalogService) GetBySKU(sku string) (Product, bool) {
 	return product, ok
 }
 
-func main() {
-	service := NewCatalogService()
-
-	http.HandleFunc("GET /catalog", func(w http.ResponseWriter, r *http.Request) {
+func catalogHandler(service CatalogService) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		_ = service
 		_ = json.NewEncoder
 		// TODO: implement
-	})
+	}
+}
+
+func main() {
+	service := NewCatalogService()
+
+	http.HandleFunc("GET /catalog", catalogHandler(service))
 
 	_ = http.ListenAndServe(":8080", nil)
 }
