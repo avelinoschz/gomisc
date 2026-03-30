@@ -1,5 +1,5 @@
 // This snippet implements a small version of the Factory pattern.
-// It is used to create different transports from a shared abstraction.
+// The factory hides which concrete transport is created for each type.
 package main
 
 import (
@@ -13,50 +13,45 @@ type Transporter interface {
 
 type Truck struct{}
 
-func (t *Truck) Transport() string {
+func (t Truck) Transport() string {
 	return "transported by truck"
 }
 
 type Ship struct{}
 
-func (s *Ship) Transport() string {
+func (s Ship) Transport() string {
 	return "transported by ship"
 }
 
-type TransportType int32
+type TransportType int
 
 const (
 	Land TransportType = iota
 	Sea
 )
 
-type TransportFactory struct{}
-
-func (tf *TransportFactory) NewTransport(transportType TransportType) (Transporter, error) {
+func NewTransport(transportType TransportType) (Transporter, error) {
 	switch transportType {
 	case Land:
-		return &Truck{}, nil
+		return Truck{}, nil
 	case Sea:
-		return &Ship{}, nil
+		return Ship{}, nil
 	default:
 		return nil, errors.New("unsupported transport type")
 	}
 }
 
 func main() {
-	fmt.Println("land:", Land)
-	fmt.Println("sea:", Sea)
-
-	factory := &TransportFactory{}
-	t1, err := factory.NewTransport(Land)
+	landTransport, err := NewTransport(Land)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(t1.Transport())
 
-	t2, err := factory.NewTransport(Sea)
+	seaTransport, err := NewTransport(Sea)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(t2.Transport())
+
+	fmt.Println(landTransport.Transport())
+	fmt.Println(seaTransport.Transport())
 }
